@@ -1,5 +1,6 @@
 import SectionContainer from './SectionContainer'
 import Link from '../Link'
+import Footer from './Footer'
 
 type linkType ={
     title:string,
@@ -51,7 +52,7 @@ const LayoutWrapper: React.FC = ({ children }) => {
                 </div>
             </header>
             <main className="mb-auto">{children}</main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     </SectionContainer>)
 }
