@@ -1,18 +1,40 @@
 import SectionContainer from './SectionContainer'
 import Link from '../Link'
 import Footer from './Footer'
+import ThemeSwitch from '../ThemeSwitch'
 
 type linkType ={
     title:string,
     href:string
 }
 
+type dataType ={
+    headerTitle:string|number
+}
+
+
 const headerNavLinks:linkType[]= [
  {
-     title:'博客',
+     title:'归档',
      href:'/blog'
- }
+ },
+ {
+    title:'项目',
+    href:'/blog'
+},
+{
+    title:'关于',
+    href:'/blog'
+},
+{
+    title:'留言',
+    href:'/blog'
+}
 ]
+
+const siteMetadata:dataType = {
+    headerTitle:'阿星的博客'
+}
 
 const LayoutWrapper: React.FC = ({ children }) => {
     return (<SectionContainer>
@@ -25,13 +47,13 @@ const LayoutWrapper: React.FC = ({ children }) => {
                                 {/* <Logo /> */}
                                 <h1>logo</h1>
                             </div>
-                            {/* {typeof siteMetadata.headerTitle === 'string' ? (
+                            {typeof siteMetadata.headerTitle === 'string' ? (
                                 <div className="hidden h-6 text-2xl font-semibold sm:block">
                                     {siteMetadata.headerTitle}
                                 </div>
                             ) : (
                                 siteMetadata.headerTitle
-                            )} */}
+                            )}
                         </div>
                     </Link>
                 </div>
@@ -47,8 +69,8 @@ const LayoutWrapper: React.FC = ({ children }) => {
                             </Link>
                         ))}
                     </div>
-                    {/* <ThemeSwitch />
-                    <MobileNav /> */}
+                    <ThemeSwitch />
+                    {/* <MobileNav /> */}
                 </div>
             </header>
             <main className="mb-auto">{children}</main>
