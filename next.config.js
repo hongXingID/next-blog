@@ -1,6 +1,9 @@
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/
+})
 
 
-module.exports = {
+module.exports = withMDX({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx','tsx', 'md', 'mdx'],
   eslint: {
@@ -37,4 +40,4 @@ module.exports = {
 
     return config
   },
-}
+})

@@ -1,7 +1,9 @@
+import Logo from '../../../public/logo.svg'
 import SectionContainer from './SectionContainer'
 import Link from '../Link'
 import Footer from './Footer'
 import ThemeSwitch from '../ThemeSwitch'
+
 
 type linkType ={
     title:string,
@@ -44,8 +46,7 @@ const LayoutWrapper: React.FC = ({ children }) => {
                     <Link href="/" aria-label="Tailwind CSS Blog">
                         <div className="flex items-center justify-between">
                             <div className="mr-3">
-                                {/* <Logo /> */}
-                                <h1>logo</h1>
+                                <Logo className="fill-current" />
                             </div>
                             {typeof siteMetadata.headerTitle === 'string' ? (
                                 <div className="hidden h-6 text-2xl font-semibold sm:block">
